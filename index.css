@@ -1,0 +1,18 @@
+body {
+  font-family: Roboto, sans-serif;
+  background: #fffaeb;
+  color: #333;
+  padding: 1rem;
+  margin: 0;
+  min-height: 100vh;
+  font-size: 1rem;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  margin-top: 1rem;
+  list-style: none;
+}
