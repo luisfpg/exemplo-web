@@ -78,9 +78,14 @@ header nav ul li {
   margin-bottom: 0.5rem;
 }
 
-a.icone {
+.icone {
   width: 2rem;
   height: 2rem;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  color: white;
+  padding: 0;
 }
 
 svg {
@@ -151,7 +156,7 @@ footer {
 /* Resolução tablet ou superior */
 
 @media (min-width: 600px) {
-  header a.menu {
+  header .menu {
     display: none;
   }
 
