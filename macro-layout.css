@@ -1,0 +1,206 @@
+body {
+  font-family: Roboto, sans-serif;
+  background: #fffaeb;
+  color: #333;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cabeçalho */
+
+header {
+  position: sticky;
+  top: 0;
+  height: 2em;
+  background-color: #0d6efd;
+  padding: 1rem;
+  display: flex;
+}
+
+header,
+header a,
+header a:hover,
+header a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.titulo {
+  font-size: 2rem;
+  line-height: 1em;
+  margin-left: 1rem;
+}
+
+/* Menu de navegação */
+
+header nav {
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  min-width: 16rem;
+  max-width: 20rem;
+  background-color: #333;
+  color: white;
+  position: fixed;
+  left: -20rem;
+  top: 0;
+  height: 100vh;
+  transition: left 300ms;
+}
+
+.titulo-menu {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.titulo-menu span {
+  flex-grow: 1;
+  font-size: 1.4rem;
+  line-height: 1em;
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  list-style-type: none;
+  display: flex;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+a.icone {
+  width: 2rem;
+  height: 2rem;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Menu dinâmico aberto */
+
+body.menu {
+  overflow: hidden;
+}
+
+body.menu header {
+  z-index: 1000;
+}
+
+body.menu header nav {
+  left: 0;
+}
+
+/* Sombra ao fundo */
+.backdrop {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  filter: opacity(0.3);
+  background-color: black;
+  z-index: 999;
+}
+
+body.menu .backdrop {
+  display: block;
+}
+
+/* Parte principal */
+main {
+  flex-grow: 1;
+  display: flex;
+  padding: 1rem;
+}
+
+/* Conteúdo principal */
+article {
+  flex-grow: 1;
+}
+
+/* Conteúdo secundário, exibido em desktops */
+aside {
+  display: none;
+}
+
+/* Rodapé */
+
+footer {
+  background-color: #333;
+  position: sticky;
+  bottom: 0;
+  height: 1rem;
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+/* Resolução tablet ou superior */
+
+@media (min-width: 600px) {
+  header a.menu {
+    display: none;
+  }
+
+  .titulo {
+    margin-left: 0;
+    flex-grow: 1;
+  }
+
+  .titulo-menu {
+    display: none;
+  }
+
+  header nav {
+    position: relative;
+    padding: 0;
+    align-self: center;
+    left: unset;
+    top: unset;
+    height: auto;
+    transition: unset;
+    background-color: unset;
+    min-width: unset;
+    max-width: unset;
+  }
+
+  header nav ul {
+    flex-direction: row;
+  }
+
+  header nav ul li {
+    list-style-type: none;
+    display: flex;
+    margin-bottom: 0;
+    margin-left: 1rem;
+    align-self: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .titulo {
+    flex-grow: 0;
+    width: 10rem;
+  }
+  aside {
+    display: block;
+    margin-left: 1rem;
+    max-width: 14rem;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+}

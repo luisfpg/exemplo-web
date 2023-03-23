@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo de macro layout</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="macro-layout.css" />
+  <script src="macro-layout.js"></script>
+</head>
+
+<body>
+  <header>
+    <a class="menu icone" href="javascript:alternaMenu()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
+        viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+      </svg>
+    </a>
+    <span class="titulo">Titulo</span>
+    <nav>
+      <div class="titulo-menu">
+        <span>Titulo</span>
+        <a class="fecha-menu icone" href="javascript:alternaMenu()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x"
+            viewBox="0 0 16 16">
+            <path
+              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+          </svg>
+        </a>
+      </div>
+      <ul>
+        <li><a href="#" onclick="alternaMenu()">Início</a></li>
+        <li><a href="#pagina1" onclick="alternaMenu()">Página 1</a></li>
+        <li><a href="#pagina2" onclick="alternaMenu()">Página 2</a></li>
+        <li><a href="#pagina3" onclick="alternaMenu()">Página 3</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <article>
+      Este é o conteúdo principal
+    </article>
+    <aside>
+      Este conteúdo secundário é somente em desktops
+    </aside>
+  </main>
+  <footer>Este é o rodapé</footer>
+  <div class="backdrop" onclick="escondeMenu()"></div>
+</body>
+
+</html>
