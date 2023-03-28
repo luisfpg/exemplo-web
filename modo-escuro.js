@@ -1,30 +1,54 @@
+const temas = ['auto', 'claro', 'escuro'];
+const nomes = ['Automático', 'Claro', 'Escuro'];
+
 /** Define o tema atual */
 function defineTema(tema) {
     if (!tema) {
         // Primeiro tenta recuperar o que estava salvo
-        tema = localStorage.getItem('tema');
-    }
-    if (!tema) {
-        // Nenhum tema salvo. Pega a preferência
-        const prefereEscuro = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        tema = prefereEscuro ? 'escuro' : 'claro';
+        tema = localStorage.getItem('tema') || 'auto';
     }
     // Armazena para a próxima visita
     localStorage.setItem('tema', tema);
+
+    // Se o tema for automático, usa o media query
+    let temaFinal = tema;
+    if (temaFinal === 'auto') {
+        const prefereEscuro = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        temaFinal = prefereEscuro ? 'escuro' : 'claro';
+    }
+    
     // Define os estilos no elemento <body>
-    if (tema === 'claro') {
+    if (temaFinal === 'claro') {
         document.body.classList.add('claro');
         document.body.classList.remove('escuro');
     } else {
         document.body.classList.add('escuro');
         document.body.classList.remove('claro');
     }
-    document.getElementById('alterna-tema').innerHTML = 
+
+    // Atualiza o nome do tema
+    document.getElementById('nome-tema').innerHTML =
+        nomes[temas.indexOf(tema)];
+    // Atualiza o ícone do tema
+    document.getElementById('icone-tema').innerHTML = 
         document.getElementById(`icone-${tema}`).innerHTML;
+
 }
 
 /** Alterna o tema atual */
 function alternaTema() {
-    const atual = localStorage.getItem('tema');
-    defineTema(atual == 'claro' ? 'escuro' : 'claro');
+    const atual = localStorage.getItem('tema') || 'auto';
+    let proximo = temas.indexOf(atual) + 1;
+    if (proximo >= temas.length) {
+        proximo = 0;
+    }
+    defineTema(temas[proximo]);
 }
+
+/** Quando o usuário muda a preferência, ajustar */
+window.matchMedia('(prefers-color-scheme: dark)').onchange = e => {
+    const atual = localStorage.getItem('tema') || 'auto';
+    if (atual === 'auto') {
+        defineTema(atual);
+    }
+};

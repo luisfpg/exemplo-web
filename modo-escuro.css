@@ -19,6 +19,7 @@
 }
 
 body {
+  font-family: Roboto, sans-serif;
   background: var(--body-bg);
   color: var(--body-fg);
   padding: 0;
@@ -37,7 +38,7 @@ header {
   top: 0;
 }
 
-header span {
+.titulo {
   flex-grow: 1;
   font-size: 1.6rem;
 }
@@ -50,25 +51,11 @@ button {
   border: 1px solid var(--button-border);
   border-radius: 0.25rem;
   font-size: 1rem;
+  flex: 0 0;
 }
 
 button+button {
   margin-top: 0.5rem;
-}
-
-.icone {
-  width: 2rem;
-  height: 2rem;
-  background: transparent;
-  border: none;
-  box-shadow: none;
-  color: var(--header-fg);
-  padding: 0;
-  flex-shrink: 0;
-} 
-.icone svg {
-  width: 100%;
-  height: 100%;
 }
 
 .conteudo {
@@ -81,6 +68,28 @@ button+button {
 
 .dispositivo::after {
   content: "Celular?";
+}
+
+#alterna-tema {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  color: var(--header-fg);
+  padding: 0;
+  flex-shrink: 0;
+}
+#nome-tema {
+  margin-right: 1rem;
+}
+#icone-tema {
+  width: 2rem;
+  height: 2rem;
+} 
+#icone-tema svg {
+  width: 100%;
+  height: 100%;
 }
 
 @media (min-width: 600px) {
