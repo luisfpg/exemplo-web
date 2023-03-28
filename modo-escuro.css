@@ -1,21 +1,21 @@
 :root {
-  --body-bg: #fffaeb;
-  --body-fg: #333;
-  --border: black;
+  --body-bg: #c8e6ff;
+  --body-fg: #094093;
+  --border: #094093;
   --button-bg: #0d6efd;
   --button-border: #094093;
   --button-fg: white;
-  --header-bg: #3a3a3a;
-  --header-fg: white;
+  --header-bg: #a7bfd5;
+  --header-fg: #094093;
 }
 .escuro {
-  --body-bg: #333;
-  --body-fg: white;
-  --border: black;
+  --body-bg: #313f4a;
+  --body-fg: #a7bfd5;
+  --border: #212a31;
   --button-bg: #094093;
   --button-border: #062f6c;
-  --header-bg: #1d1d1d;
-  --header-fg: white;
+  --header-bg: #212a31;
+  --header-fg: #a7bfd5;
 }
 
 body {
@@ -62,14 +62,6 @@ button+button {
   padding: 0.5rem;
 }
 
-.dispositivo {
-  margin-top: 1rem;
-}
-
-.dispositivo::after {
-  content: "Celular?";
-}
-
 #alterna-tema {
   display: flex;
   align-items: center;
@@ -109,24 +101,10 @@ button+button {
     margin-top: 0;
     margin-left: 1rem;
   }
-
-  .dispositivo::after {
-    content: "Tablet?";
-  }
 }
 
 @media (min-width: 1024px) {
   .conteudo {
     max-width: 800px;
-  }
-
-  .dispositivo::after {
-    content: "Laptop?";
-  }
-}
-
-@media (min-width: 1440px) {
-  .dispositivo::after {
-    content: "Desktop?";
   }
 }
