@@ -1,0 +1,33 @@
+.com-animacao {
+  display: block;
+}
+.sem-animacao {
+  display: none;
+}
+
+svg {
+  width: 20rem;
+  height: 20rem;
+  animation: rotacao 2s infinite linear;
+}
+
+@keyframes rotacao {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .com-animacao {
+    display: none;
+  }
+  .sem-animacao {
+    display: block;
+  }
+  svg {
+    animation: none;
+  }
+}
