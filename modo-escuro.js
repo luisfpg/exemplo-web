@@ -6,7 +6,7 @@ function defineTema(tema) {
     }
     if (!tema) {
         // Nenhum tema salvo. Pega a preferência
-        const prefereEscuro = window.matchMedia('(preferes-color-scheme: dark)').matches;
+        const prefereEscuro = window.matchMedia('(prefers-color-scheme: dark)').matches;
         tema = prefereEscuro ? 'escuro' : 'claro';
     }
     // Armazena para a próxima visita
