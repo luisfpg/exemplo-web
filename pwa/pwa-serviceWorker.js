@@ -1,23 +1,18 @@
 const CACHE = 'cache-v1';
 const OFFLINE = 'pwa-offline.html';
 
-// Arquivos para adicionar ao cache
-const arquivosCache = ['./', 'index.html', OFFLINE, 'pwa.css', 'pwa.js', 'pwa-192.png'];
-
-// Ao instalar o service worker, adicionar os arquivos ao cache
+// Ao instalar o service worker, adicionar a página offline ao cache
 self.addEventListener('install', (event) => {
-  event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(arquivosCache)));
+  event.waitUntil(caches.open(CACHE).then((cache) => cache.add(OFFLINE)));
 });
 
+// Ao requisitar uma página, se estiver offline, servimos a página offline
 self.addEventListener('fetch', (event) => {
   let request = event.request;
   if (event.request.mode === "navigate") {
     async function responder() {
       try {
-        const response = await fetch(request, {
-          cache: "no-cache"
-        });
-        return response;
+        return await fetch(request);
       } catch (e) {
         const cache = await caches.open(CACHE);
         const offline =  await cache.match(OFFLINE);
