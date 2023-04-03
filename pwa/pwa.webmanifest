@@ -15,8 +15,8 @@
     }
   ],
   "id": "pwa",
-  "start_url": "/pwa/",
-  "scope": "/pwa/",
+  "start_url": "https://luisfpg.github.io/exemplo-web/pwa",
+  "scope": "https://luisfpg.github.io/exemplo-web/pwa",
   "display": "standalone",
   "background_color": "#3367D6",
   "theme_color": "#3367D6"
