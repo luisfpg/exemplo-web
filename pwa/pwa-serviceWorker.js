@@ -14,7 +14,9 @@ self.addEventListener('fetch', (event) => {
   if (event.request.mode === "navigate") {
     async function responder() {
       try {
-        const response = await fetch(request);
+        const response = await fetch(request, {
+          cache: "no-cache"
+        });
         return response;
       } catch (e) {
         const cache = await caches.open(CACHE);
