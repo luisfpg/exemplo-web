@@ -1,0 +1,23 @@
+{
+  "short_name": "PWA",
+  "name": "Exemplo de PWA",
+  "description": "Manifesto para mostrar uma PWA instalável",
+  "icons": [
+    {
+      "src": "pwa-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "pwa-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "id": "pwa",
+  "start_url": "https://luisfpg.github.io/exemplo-web/pwa",
+  "scope": "https://luisfpg.github.io/exemplo-web/pwa",
+  "display": "standalone",
+  "background_color": "#3367D6",
+  "theme_color": "#3367D6"
+}

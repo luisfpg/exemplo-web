@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo de PWA</title>
+</head>
+
+<style>
+body {
+  font-family: sans-serif;
+  background: #fffaeb;
+  color: #333;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  padding: 1rem 2rem;
+  color: white;
+  background-color: #0d6efd;
+  border: 1px solid #094093;
+  border-radius: 0.25rem;
+  font-size: 2rem;
+  font-family: sans-serif;
+  margin-top: 2rem;
+}
+</style>
+
+<body>
+  <p>Você está offline... Esta página é servida quando não há conexão.</p>
+  <p>Tente novamente mais tarde!</p>
+  <button onclick="location = './'">Recarregar a página</button>
+</body>
+
+</html>
