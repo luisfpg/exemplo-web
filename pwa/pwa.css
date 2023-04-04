@@ -2,7 +2,7 @@ body {
   font-family: sans-serif;
   background: #fffaeb;
   color: #333;
-  padding: 0;
+  padding: 1rem;
   margin: 0;
   min-height: 100vh;
   font-size: 2rem;
@@ -10,4 +10,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
