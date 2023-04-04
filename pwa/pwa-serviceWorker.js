@@ -12,10 +12,12 @@ self.addEventListener('fetch', (event) => {
   if (event.request.mode === "navigate") {
     async function responder() {
       try {
-        return await fetch(request);
+        return await fetch(request, {
+          cache: 'reload'
+        });
       } catch (e) {
         const cache = await caches.open(CACHE);
-        const offline =  await cache.match(OFFLINE);
+        const offline = await cache.match(OFFLINE);
         return new Response(offline.body, {
           headers: offline.headers,
           status: offline.status,
