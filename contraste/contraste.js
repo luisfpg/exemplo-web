@@ -14,7 +14,7 @@ function conteudo() {
       div.innerHTML = `
         <div>fg: ${texto}</div>
         <div>bg: ${fundo}</div>
-        <div>taxa: ${contraste.toFixed(2)}</div>
+        <div>taxa: ${contraste.toFixed(1)}</div>
       `;
       main.appendChild(div);
     }
