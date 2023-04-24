@@ -2,18 +2,41 @@
 <html>
 
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Web components</title>
   <script src="date-range-input.js"></script>
   <script src="date-range-display.js"></script>
+  <script src="https://pie-meister.github.io/PieMeister.min.js"></script>
   <script src="web-components.js"></script>
 </head>
 
 <body onload="inicializar()">
+  <h1>Intervalo de datas</h1>
   <date-range-input id="datas" min="2020-01-01" max="2030-12-31"></date-range-input>
   <br><br>
   <div id="saida"></div>
+  <br><br>
+  <h1>Gráfico de setores</h1>
+  <p>Este exemplo utiliza o componente disponível em <a href="https://pie-meister.github.io/">https://pie-meister.github.io/</a></p>
+  <pie-chart pulltext="130">
+    <slice size="196" stroke="#88bde6">JavaScript</slice>
+    <slice size="169" stroke="#fbb258">Python</slice>
+    <slice size="165" stroke="#90cd97">Java</slice>
+    <slice size="123" stroke="#f6aac9">C / C++</slice>
+    <slice size="106" stroke="#bfa554">C#</slice>
+    <slice size="89" stroke="#bc99c7">PHP</slice>
+    <slice size="61" stroke="#eddd46">Kotlin</slice>
+    <slice size="91" stroke="#8c8c8c">Outros</slice>
+    <style>
+      [label] {
+        font-size: 3rem;
+        text-anchor: middle;
+      }
+    </style>
+  </pie-chart>
+  <br>
+  <a href="https://www.slashdata.co/blog/state-of-the-developer-nation-23rd-edition-the-fall-of-web-frameworks-coding-languages-blockchain-and-more">Fonte dos dados</a>
 </body>
 
 </html>
