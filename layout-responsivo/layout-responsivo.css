@@ -64,14 +64,14 @@ header nav {
   line-height: 1em;
 }
 
-header nav ul {
+header nav menu {
   display: flex;
   flex-direction: column;
   margin: 0;
   padding: 0;
 }
 
-header nav ul li {
+header nav menu li {
   list-style-type: none;
   display: flex;
   font-size: 1.2rem;
@@ -115,8 +115,7 @@ body.menu header nav {
   top: 0;
   width: 100vw;
   height: 100vh;
-  filter: opacity(0.3);
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
@@ -182,16 +181,13 @@ footer {
     max-width: unset;
   }
 
-  header nav ul {
+  header nav menu {
     flex-direction: row;
   }
 
-  header nav ul li {
-    list-style-type: none;
-    display: flex;
+  header nav menu li {
     margin-bottom: 0;
     margin-left: 1rem;
-    align-self: center;
   }
 }
 

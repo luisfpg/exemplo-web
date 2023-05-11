@@ -42,7 +42,7 @@ button + button {
   }
 
   button {
-    width: auto;
+    width: fit-content;
   }
 
   button + button {
