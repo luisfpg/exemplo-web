@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "nome": "Bicicleta",
+    "descricao": "Uma bicicleta para você se exercitar e conhecer a cidade!",
+    "imagem": "bike.png",
+    "preco": 900
+  },
+  {
+    "id": 2,
+    "nome": "Carro",
+    "descricao": "Um sonho de carro na sua garagem!",
+    "imagem": "car.png",
+    "preco": 50000
+  },
+  {
+    "id": 3,
+    "nome": "Moto",
+    "descricao": "Uma moto que vai levar você a aventuras a cada dia!",
+    "imagem": "moto.png",
+    "preco": 12000
+  }
+]

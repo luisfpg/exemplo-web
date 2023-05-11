@@ -1,0 +1,7 @@
+{
+  "id": 2,
+  "nome": "Carro",
+  "descricao": "Um sonho de carro na sua garagem!",
+  "imagem": "car.png",
+  "preco": 50000
+}

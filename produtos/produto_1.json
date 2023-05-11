@@ -1,0 +1,7 @@
+{
+  "id": 1,
+  "nome": "Bicicleta",
+  "descricao": "Uma bicicleta para você se exercitar e conhecer a cidade!",
+  "imagem": "bike.png",
+  "preco": 900
+}

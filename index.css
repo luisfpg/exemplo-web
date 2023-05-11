@@ -4,7 +4,6 @@ body {
   color: #333;
   padding: 1rem;
   margin: 0;
-  min-height: 100vh;
   font-size: 1rem;
 }
 
@@ -15,4 +14,12 @@ ul {
 li {
   margin-top: 1rem;
   list-style: none;
+}
+
+a, a:visited {
+  color: #333;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
